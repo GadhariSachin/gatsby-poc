@@ -6,5 +6,15 @@ module.exports = {
     title: `Gatsby POC`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: "a70h5thn88lt",
+        accessToken: "XyGfLbIDzJ6hzEykhUn_XB8jgbPu33OuxvXTTJdEUfo",
+      },
+    },
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-image`,
+  ],
+};
