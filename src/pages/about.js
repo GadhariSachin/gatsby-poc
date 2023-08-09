@@ -14,22 +14,20 @@ const headingAccentStyles = {
   color: "#663399",
 };
 
-const IndexPage = () => {
+const AboutPage = () => {
   return (
     <>
       <Header />
       <main style={pageStyles}>
         <h1 style={headingStyles}>
-          Congratulations
-          <span style={headingAccentStyles}>
-            — you just made a Gatsby site! 🎉🎉🎉
-          </span>
+          About Page
+          <span style={headingAccentStyles}>— just an another page 🎉🎉🎉</span>
         </h1>
       </main>
     </>
   );
 };
 
-export default IndexPage;
+export default AboutPage;
 
-export const Head = () => <title>Gatsby Home Page</title>;
+export const Head = () => <title>Gatsby | About Page</title>;
