@@ -9,15 +9,12 @@ import {
 } from "./productList.module.css";
 
 function ProductsList() {
-  const [selectedManufacturer, setSelectedManufacturer] =
-    React.useState("Sonata");
+  const [selectedManufacturer, setSelectedManufacturer] = React.useState("");
 
   const contentData = useStaticQuery(
     graphql`
       query {
-        allContentfulProduct(
-          filter: { productManufacturer: { eq: "Sonata" } }
-        ) {
+        allContentfulProduct {
           nodes {
             id
             productTitle
