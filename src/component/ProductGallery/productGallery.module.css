@@ -1,0 +1,18 @@
+.productGalleryStyles{
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.productImageStyles{
+  height: 300px;
+  width: 100%;
+  object-fit: contain;
+  transition: all 0.5s ease-in-out;
+}
+
+.productImageStyles:hover{
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+} 

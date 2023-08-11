@@ -1,0 +1,75 @@
+.productCardWrapperStyles{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 400px;
+  height: 570px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+.productCardWrapperStyles:hover {
+  transform: scale(1.05);
+}
+
+.productTitleStyles{
+  width: 100%;
+  font-weight: normal;
+  text-align: center;
+  color: #626161;
+}
+
+.productPriceStyles{
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+}
+
+.priceLabelStyles{
+  color: #626161;
+  font-size: 14px;
+  display: contents;
+}
+
+
+.productManufacturerStyles{
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.buttonStyles{
+  width: 100%;
+  padding: 10px;
+  background: #FFA41C;
+  border-color: #FF8F00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.buttonStyles:hover{
+  background: #FF8F00;
+  border-color: #FFA41C;
+  transform: scale(1.05);
+}
+
+.addToCartButtonStyle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  color: white;
+}
+
+.addToCartTextStyles{
+  color: white;
+    font-size: 16px;
+    font-weight: bold;
+}

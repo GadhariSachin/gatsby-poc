@@ -1,0 +1,35 @@
+.productListWrapperStyles {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 1644px;
+  flex-wrap: wrap;
+}
+
+.titleStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 24px;
+}
+
+.filterWrapperStyles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.selectBrandDropdown{
+  width: fit-content;
+  padding: 10px 20px;
+  border: transparent;
+  border-bottom: 1px solid #929292;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
