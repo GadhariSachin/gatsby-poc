@@ -30,6 +30,7 @@ function ProductsList() {
               url
               filename
             }
+            priceId
           }
           totalCount
         }
@@ -39,7 +40,7 @@ function ProductsList() {
 
   const productsListArray = contentData.allContentfulProduct || {};
   const nodes = productsListArray.nodes || [];
-  const totalProducts = productsListArray.totalCount || 0;
+  // const totalProducts = productsListArray.totalCount || 0;
 
   return (
     <>

@@ -1,8 +1,13 @@
 import React from "react";
 
-function Button({ btnClasses = "", onclick = () => {}, children }) {
+function Button({
+  btnClasses = "",
+  clickHandler = () => {},
+  loading = false,
+  children,
+}) {
   return (
-    <button onClick={onclick} className={btnClasses}>
+    <button onClick={clickHandler} className={btnClasses} disabled={loading}>
       {children}
     </button>
   );

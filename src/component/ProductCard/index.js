@@ -1,17 +1,14 @@
 import React from "react";
 import ProductRating from "../ProductRatings";
 import ProductImageGallery from "../ProductGallery";
-import Button from "../Button";
 import {
   productCardWrapperStyles,
   productManufacturerStyles,
   productTitleStyles,
   productPriceStyles,
   priceLabelStyles,
-  buttonStyles,
-  addToCartButtonStyle,
-  addToCartTextStyles,
 } from "./productCard.module.css";
+import CheckoutButton from "../CheckoutButton";
 
 function ProductCard({ productData }) {
   const {
@@ -19,7 +16,7 @@ function ProductCard({ productData }) {
     productPrice = 0,
     productRating = 0,
     productManufacturer = "",
-    productInventory = 0,
+    priceId = "",
     productGallery = [],
   } = productData;
 
@@ -41,14 +38,8 @@ function ProductCard({ productData }) {
         <span>{productPrice}</span>
       </div>
 
-      {/* <div className={productInventoryStyles}>{productInventory}</div> */}
-
       {/* add to casrt button */}
-      <Button btnClasses={buttonStyles} onClick={() => {}}>
-        <div className={addToCartButtonStyle}>
-          <div className={addToCartTextStyles}>Add to cart</div>
-        </div>
-      </Button>
+      <CheckoutButton priceId={priceId} />
     </div>
   );
 }

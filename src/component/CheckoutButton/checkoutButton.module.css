@@ -1,0 +1,30 @@
+.buttonStyles {
+  width: 100%;
+  padding: 10px;
+  background: #FFA41C;
+  border-color: #FF8F00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.buttonStyles:hover {
+  background: #FF8F00;
+  border-color: #FFA41C;
+  transform: scale(1.05);
+}
+
+.addToCartButtonStyle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+  color: white;
+}
+
+.addToCartTextStyles {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
