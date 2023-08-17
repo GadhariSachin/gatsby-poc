@@ -6,41 +6,18 @@ import {
   titleStyles,
   filterWrapperStyles,
   selectBrandDropdown,
+  emptyResultsWrapper,
 } from "./productList.module.css";
+import useProductsData from "./useProductsData";
 
 function ProductsList() {
   const [selectedManufacturer, setSelectedManufacturer] = React.useState("");
+  const [selectedRatingFilter, setSelectedRatingFilter] = React.useState("");
 
-  const contentData = useStaticQuery(
-    graphql`
-      query {
-        allContentfulProduct {
-          nodes {
-            id
-            productTitle
-            productDescription {
-              productDescription
-            }
-            productPrice
-            productRating
-            productManufacturer
-            productInventory
-            productGallery {
-              id
-              url
-              filename
-            }
-            priceId
-          }
-          totalCount
-        }
-      }
-    `
-  );
-
-  const productsListArray = contentData.allContentfulProduct || {};
-  const nodes = productsListArray.nodes || [];
-  // const totalProducts = productsListArray.totalCount || 0;
+  const { productsData } = useProductsData({
+    selectedManufacturer,
+    selectedRatingFilter,
+  });
 
   return (
     <>
@@ -49,21 +26,42 @@ function ProductsList() {
           <h2>Premium Watches </h2>
         </div>
         <div className={filterWrapperStyles}>
-          <strong>Filter by brands :</strong>
-          <select
-            className={selectBrandDropdown}
-            onChange={(event) => setSelectedManufacturer(event.target.value)}
-            value={selectedManufacturer}
-          >
-            <option value="">All</option>
-            <option value="Sonata">Sonata</option>
-            <option value="Titan">Titan</option>
-            <option value="Casio">Casio</option>
-          </select>
+          <div>
+            <strong>Brands :</strong>
+            <select
+              className={selectBrandDropdown}
+              onChange={(event) => setSelectedManufacturer(event.target.value)}
+              value={selectedManufacturer}
+            >
+              <option value="">All</option>
+              <option value="Sonata">Sonata</option>
+              <option value="Titan">Titan</option>
+              <option value="Casio">Casio</option>
+            </select>
+          </div>
+          <div>
+            <strong>Rating :</strong>
+            <select
+              className={selectBrandDropdown}
+              onChange={(event) => setSelectedRatingFilter(event.target.value)}
+              value={selectedRatingFilter}
+            >
+              <option value="">All</option>
+              <option value="1"> 1 </option>
+              <option value="2"> 2 </option>
+              <option value="3"> 3 </option>
+              <option value="4"> 4 </option>
+              <option value="5"> 5</option>
+            </select>
+          </div>
         </div>
-        {nodes.map((item) => (
-          <ProductCard productData={item} key={item.id} />
-        ))}
+        {productsData?.length ? (
+          productsData.map((item) => (
+            <ProductCard productData={item} key={item.id} />
+          ))
+        ) : (
+          <div className={emptyResultsWrapper}>No results found</div>
+        )}
       </div>
     </>
   );

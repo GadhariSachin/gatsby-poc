@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  gap: 30px;
 }
 
 .selectBrandDropdown{
@@ -32,4 +33,14 @@
   outline: none;
   font-size: 16px;
   transition: all 0.5s ease-in-out;
+}
+
+.emptyResultsWrapper{
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: lighter;
 }
