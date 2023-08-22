@@ -11,7 +11,7 @@ const pageStyles = {
 const IndexPage = () => {
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main style={pageStyles}>
         <CartProvider
           mode="payment"
