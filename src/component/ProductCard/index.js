@@ -7,8 +7,10 @@ import {
   productTitleStyles,
   productPriceStyles,
   priceLabelStyles,
+  buttonStyles,
 } from "./productCard.module.css";
 import CheckoutButton from "../CheckoutButton";
+import { useShoppingCart } from "use-shopping-cart";
 
 function ProductCard({ productData }) {
   const {
@@ -19,6 +21,8 @@ function ProductCard({ productData }) {
     priceId = "",
     productGallery = [],
   } = productData;
+
+  const { addItem } = useShoppingCart();
 
   return (
     <div className={productCardWrapperStyles}>
@@ -39,7 +43,22 @@ function ProductCard({ productData }) {
       </div>
 
       {/* add to casrt button */}
-      <CheckoutButton priceId={priceId} />
+      {/* <CheckoutButton priceId={priceId} /> */}
+      <button
+        className={buttonStyles}
+        onClick={() =>
+          addItem({
+            name: productTitle,
+            description: "",
+            sku: priceId,
+            price: productPrice,
+            image: productGallery[0],
+            currency: "USD",
+          })
+        }
+      >
+        <div>Add to cart</div>
+      </button>
     </div>
   );
 }

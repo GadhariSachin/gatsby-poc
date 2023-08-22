@@ -1,0 +1,124 @@
+.cartIconWrapperStyles{
+  display : flex;
+  position: relative;
+  align-items: center;
+  justify-self: center;
+  cursor: pointer;
+}
+.cartIconstyles{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+      transform: scale(1.7);
+  height: 60px;
+  width: 60px;
+}
+.cartCountStyles{
+  font-size: 24px;
+  
+}
+.modalWrapperStyles{
+  background: white;
+  
+  width: 80vw;
+  top: 100px;
+  position: absolute;
+  z-index: 1;
+  padding: 40px 20px;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.modalBody{
+  padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+
+    max-height: 700px;
+    overflow-y: scroll;
+}
+.modalHeader{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modalFooter{
+  padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modalHeadeCloseIcon{
+  cursor: pointer;
+}
+.modalHeaderText{
+  font-size: 24px;
+}
+
+.removeButtonStyles{
+width: 200px;
+  padding: 10px;
+  background: #ff1c1c;
+    border-color: #ff0000;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  color: white;
+}
+
+.checkoutButtonStyles{
+width: 200px;
+  padding: 10px;
+  background: #FFA41C;
+  border-color: #FF8F00;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  color: white;
+}
+
+
+.removeButtonStyles:hover {
+  background: #ff0000;
+  border-color: #ff1c1c;
+  transform: scale(1.05);
+}
+
+.checkoutButtonStyles:hover {
+  background: #FF8F00;
+  border-color: #FFA41C;
+  transform: scale(1.05);
+}
+
+.cartItem{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+} 
+.cartItemImage{
+  height: 100px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.cartItemTitle{
+  font-size: 20px;
+} 
+.cartItemPrice{
+  font-size: 16px;
+} 
+.cartItemQuantity{
+font-size: 16px
+}
+.cartItemDetails{
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}

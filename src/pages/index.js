@@ -1,6 +1,7 @@
 import * as React from "react";
 import Header from "../component/Header";
 import ProductsList from "../component/ProductsList";
+import { CartProvider } from "use-shopping-cart";
 
 const pageStyles = {
   color: "#232129",
@@ -12,7 +13,18 @@ const IndexPage = () => {
     <>
       <Header />
       <main style={pageStyles}>
-        <ProductsList />
+        <CartProvider
+          mode="payment"
+          cartMode="client-only"
+          stripe={process.env.GATSBY_STRIPE_SECRET_KEY}
+          successUrl="stripe.com"
+          cancelUrl="twitter.com/dayhaysoos"
+          currency="USD"
+          allowedCountries={["US", "GB", "CA"]}
+          billingAddressCollection={true}
+        >
+          <ProductsList />
+        </CartProvider>
       </main>
     </>
   );

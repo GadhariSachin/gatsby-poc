@@ -7,8 +7,10 @@ import {
   filterWrapperStyles,
   selectBrandDropdown,
   emptyResultsWrapper,
+  productListPageWrapperStyles,
 } from "./productList.module.css";
 import useProductsData from "./useProductsData";
+import Cart from "../Cart";
 
 function ProductsList() {
   const [selectedManufacturer, setSelectedManufacturer] = React.useState("");
@@ -20,10 +22,11 @@ function ProductsList() {
   });
 
   return (
-    <>
+    <div className={productListPageWrapperStyles}>
       <div className={productListWrapperStyles}>
         <div className={titleStyles}>
-          <h2>Premium Watches </h2>
+          <h2>Premium Watches</h2>
+          <Cart />
         </div>
         <div className={filterWrapperStyles}>
           <div>
@@ -63,7 +66,7 @@ function ProductsList() {
           <div className={emptyResultsWrapper}>No results found</div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
