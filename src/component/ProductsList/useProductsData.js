@@ -45,7 +45,7 @@ function useProductsData({ selectedManufacturer, selectedRatingFilter }) {
 
     if (selectedRatingFilter) {
       filteredProductsData = filteredProductsData.filter(
-        (item) => item.productRating == selectedRatingFilter
+        (item) => item.productRating >= selectedRatingFilter
       );
     }
 
